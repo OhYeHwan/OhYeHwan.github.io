@@ -1,8 +1,8 @@
 ---
 title: "[JavaScript] 화살표 함수와 영역"
 description:
-date: 2022-01-26
-update: 2022-01-26
+date: 2022-01-25
+update: 2022-01-25
 tags:
   - JavaScript
   - this
