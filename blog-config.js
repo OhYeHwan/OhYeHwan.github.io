@@ -1,6 +1,7 @@
 module.exports = {
   title: "Olog",
-  description: "기록의 중요성을 깨닫고 글을 쓰기 시작했습니다.",
+  description:
+    "개발자로서의 성장에 목말라 있습니다. 그렇기 때문에 기록하려고 노력합니다.",
   author: "예환",
   siteUrl: "https://OhYeHwan.github.io",
   links: {
