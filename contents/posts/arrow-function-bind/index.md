@@ -91,7 +91,7 @@ print 프로퍼티를 화살표 함수로 바꾸면 내부의 this가 gangwon에
 
 <br>
 
-위 코드에서 print 프로퍼티로 정의된 함수의 this는 첫번째 배경지식에 의해서 "gangwon" 객체를 바인딩하게 됩니다. 결과를 보시면 gangwon의 resorts가 콘솔로그로 출력되있는것을 확인할 수 있습니다. 그리고 그 아래에는 setTimeout 내부에서 두번째 배경지식에 의해서 this가 출력되는데요. 결과를 보시면 window 객체가 출력된 것을 확인할 수 있습니다. 이 두가지 배경지식과 마지막 세번째 배경지식을 이용하여 위의 코드를 재해석 해본다면 다음과 같습니다.
+위 코드에서 print 프로퍼티로 정의된 함수의 this는 첫번째 배경지식에 의해서 "gangwon" 객체를 바인딩하게 됩니다. 결과를 보시면 gangwon의 resorts가 콘솔 로그에 출력되어 있는 것을 확인할 수 있습니다. 그리고 그 아래에는 setTimeout 내부에서 두번째 배경지식에 의해서 this가 출력됩니다. 결과를 보시면 window 객체가 출력된 것을 확인할 수 있습니다. 이 두가지 배경지식과 마지막 세번째 배경지식을 이용하여 위의 코드를 재해석 해본다면 다음과 같습니다.
 
 <br>
 
@@ -105,9 +105,9 @@ const gangwon = {
   },
 }
 
-gangwon.print() // 용평, 평창, 강촌, 강릉, 춘천
+gangwon.print() // Cannot read property 'join' of undefined 라는 오류 발생
 ```
 
 1. 화살표 함수로 인해서 setTimeout 내부의 this가 상위 객체의 this(gangwon)를 이어받아서 사용한다.
 2. print 프로퍼티의 메서드 정의도 화살표 함수이기 때문에 상위 객체의 this(Window)를 이어받아서 사용한다.
-3. 따라서 this = Window가 된다.
+3. 따라서 this = Window 이므로 Cannot read property 'join' of undefined 라는 오류 발생된다.
