@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Olog]]></title><description><![CDATA[개발자로서의 성장에 목말라 있습니다. 그렇기 때문에 기록하려고 노력합니다.]]></description><link>https://OhYeHwan.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 26 Jan 2022 06:40:12 GMT</lastBuildDate><item><title><![CDATA[[JavaScript] 화살표 함수와 영역]]></title><description><![CDATA[화살표 함수와 영역 책에서는 다음과 같은 코드를 제시하며 화살표 함수와 영역에 대해서 설명을 하고 있습니다. 위 코드는 "gangwon"이라는 객체의 print…]]></description><link>https://OhYeHwan.github.io/arrow-function-bind/</link><guid isPermaLink="false">https://OhYeHwan.github.io/arrow-function-bind/</guid><pubDate>Tue, 25 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;러닝 리액트(Learning React) 2판을 복습하면서 이해되지 않았던 부분에 대해서 정리 합니다.&lt;/code&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Olog]]></title><description><![CDATA[개발자로서의 성장에 목말라 있습니다. 그렇기 때문에 기록하려고 노력합니다.]]></description><link>https://OhYeHwan.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 10 Feb 2022 07:23:58 GMT</lastBuildDate><item><title><![CDATA[[Clean Code] 의미 있는 이름]]></title><description><![CDATA[…]]></description><link>https://OhYeHwan.github.io/clean-code-meaningful-name/</link><guid isPermaLink="false">https://OhYeHwan.github.io/clean-code-meaningful-name/</guid><pubDate>Wed, 09 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;의미 있는 이름&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;소프트웨어에서 이름은 어디나 쓰인다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;의도를 분명히 밝혀라&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- 의도가 분명한 이름은 정말로 중요하다.
+
+- 좋은 이름을 지으려면 시간이 걸리지만 좋은 이름으로 절약하는 시간이 훨씬 더많다.
+
+- 이름을 주의깊게 살펴 더 나은 이름이 떠오르면 개선해라.
+
+- 존재 이유, 수행 기능, 사용 방법에 대한 주석이 따로 필요없게 이름을 지어라.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;typescript&quot;&gt;&lt;pre class=&quot;language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getThem&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; list1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; x &lt;span class=&quot;token keyword&quot;&gt;of&lt;/span&gt; theList&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      list1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; list1
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;코드가 하는 일을 짐작하기 어렵다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;typescript&quot;&gt;&lt;pre class=&quot;language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getFlaggedCells&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Cell&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; flageedCells&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Cell&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; cell &lt;span class=&quot;token keyword&quot;&gt;of&lt;/span&gt; gameBoard&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cell&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;isFlagged&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      flageedCells&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cell&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; flageedCells
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;코드의 단순성은 변하지 않았지만 좋은 이름을 통해 함수가 하는 일을 이해하기 쉬워졌다.&lt;/p&gt;
+&lt;h3&gt;그릇된 정보를 피하라&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;의미 있게 구분하라&lt;/h3&gt;
+&lt;h3&gt;발음하기 쉬운 이름을 사용하라&lt;/h3&gt;
+&lt;h3&gt;검색하기 쉬운 이름을 사용하라&lt;/h3&gt;
+&lt;h3&gt;인코딩을 피하라&lt;/h3&gt;
+&lt;h3&gt;자신의 기억력을 자랑하지 마라&lt;/h3&gt;
+&lt;h3&gt;클래스 이름&lt;/h3&gt;
+&lt;h3&gt;메서드 이름&lt;/h3&gt;
+&lt;h3&gt;기발한 이름은 피하라&lt;/h3&gt;
+&lt;h3&gt;한 개념에 한 단어를 사용하라&lt;/h3&gt;
+&lt;h3&gt;해법 영역에서 가져온 이름을 사용하라&lt;/h3&gt;
+&lt;h3&gt;문제 영역에서 가져온 이름을 사용하라&lt;/h3&gt;
+&lt;h3&gt;의미 있는 맥락을 추가하라&lt;/h3&gt;
+&lt;h3&gt;불필요한 맥락을 없애라&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[[Clean Code] 깨끗한 코드]]></title><description><![CDATA[…]]></description><link>https://OhYeHwan.github.io/clean-code/</link><guid isPermaLink="false">https://OhYeHwan.github.io/clean-code/</guid><pubDate>Wed, 09 Feb 2022 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;나중은 결코 오지 않는다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;깨끗한 코드란?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;인간이 읽기 좋은 코드다.&lt;/li&gt;
+&lt;li&gt;단순하고 직접적이며 잘 쓴 문장처럼 읽혀야 한다.&lt;/li&gt;
+&lt;li&gt;다른 사람이 고치기 쉬워야한다.&lt;/li&gt;
+&lt;li&gt;세세한 사항까지 꼼꼼하게 처리하는 코드다.&lt;/li&gt;
+&lt;li&gt;주의 깊게 작성한 코드다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;결론&lt;/h2&gt;
+&lt;p&gt;대부분 시간에 쫒겨 나쁜 코드를 작성하게 된다. 하지만 나쁜 코드는 나쁜 코드를 부른다. 그리고 나쁜 코드가 쌓일수록 생산성은 떨어진다. 그러므로 급할수록 읽기 쉽게 코드를 작성하자.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[JavaScript] 화살표 함수와 영역]]></title><description><![CDATA[화살표 함수와 영역 책에서는 다음과 같은 코드를 제시하며 화살표 함수와 영역에 대해서 설명을 하고 있습니다. 위 코드는 "gangwon"이라는 객체의 print…]]></description><link>https://OhYeHwan.github.io/arrow-function-bind/</link><guid isPermaLink="false">https://OhYeHwan.github.io/arrow-function-bind/</guid><pubDate>Tue, 25 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;러닝 리액트(Learning React) 2판을 복습하면서 이해되지 않았던 부분에 대해서 정리 합니다.&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;화살표 함수와 영역&lt;/h2&gt;
 &lt;p&gt;책에서는 다음과 같은 코드를 제시하며 &lt;strong&gt;화살표 함수와 영역&lt;/strong&gt;에 대해서 설명을 하고 있습니다.&lt;/p&gt;
@@ -87,4 +145,4 @@ gangwon&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;화살표 함수로 인해서 setTimeout 내부의 this가 상위 객체의 this(gangwon)를 이어받아서 사용한다.&lt;/li&gt;
 &lt;li&gt;print 프로퍼티의 메서드 정의도 화살표 함수이기 때문에 상위 객체의 this(Window)를 이어받아서 사용한다.&lt;/li&gt;
 &lt;li&gt;따라서 this = Window 이므로 Cannot read property &apos;join&apos; of undefined 라는 오류 발생된다.&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[글 작성 테스트 입니다]]></title><description><![CDATA[글 작성 테스트 입니다!]]></description><link>https://OhYeHwan.github.io/test-kr/</link><guid isPermaLink="false">https://OhYeHwan.github.io/test-kr/</guid><pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;글 작성 테스트 입니다!&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;/ol&gt;</content:encoded></item></channel></rss>
