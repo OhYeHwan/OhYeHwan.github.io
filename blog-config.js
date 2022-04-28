@@ -1,6 +1,6 @@
 module.exports = {
-  title: "",
-  description: "",
+  title: "11",
+  description: "1123",
   author: "예환",
   siteUrl: "https://OhYeHwan.github.io",
   links: {
